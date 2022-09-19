@@ -14,8 +14,8 @@ export default new Transformer({
 (function() {
   var script = document.createElement("script");
   script.type = "text/html";
-  script.innerHTML = JSON.parse('${JSON.stringify(JSON.stringify(content))}');
-  script.id = "${fileName}";
+  script.innerHTML = JSON.parse(${JSON.stringify(JSON.stringify(content))});
+  script.id = ${JSON.stringify(fileName)};
   document.head.appendChild(script);
 })();
 `.trim()
